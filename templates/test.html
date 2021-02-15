@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee</title>
+</head>
+<body>
+
+<form action="{{ url_for('predict')}}"method="post">
+
+<ul>
+<input type="text" name="city" placeholder="City name" />
+</ul>
+
+<ul>
+<input type="text" name="city_development_index" placeholder=" City Develpment Index" required="required" />
+</ul>
+
+<ul>
+<select name="gender" >
+		<option value="" disabled selected>Select Gender</option>
+		<option value="Female">Female</option>
+		<option value="Male">Male</option>
+		<option value="Other">Other</option>
+	</select>
+</ul>
+
+<ul>
+<select name="relevent_experience" >
+		<option value="" disabled selected>Select Relevant Experience</option>
+		<option value="Has relevent experience">Has relevent experience</option>
+		<option value="No relevent experience">MaleNo relevent experience</option>
+	</select>
+</ul>
+
+<ul>
+<select name="enrolled_university" >
+		<option value="" disabled selected>Enrolled In University</option>
+		<option value="no_enrollment">not enrolled</option>
+		<option value="Full time course">full time</option>
+		<option value="Part time course">part time</option>
+	</select>
+</ul>
+
+<ul>
+<select name="education_level" >
+		<option value="" disabled selected>education level</option>
+		<option value="Primary School">Primary School</option>
+		<option value="High School">High School</option>
+		<option value="Graduate">Graduate</option>
+		<option value="Masters">Masters</option>
+		<option value="Phd">Phd</option>
+	</select>
+</ul>
+
+<ul>
+<select name="major_discipline" >
+		<option value="" disabled selected>Major</option>
+		<option value="STEM">STEM</option>
+		<option value="Business Degree">Business Degree</option>
+		<option value="Arts">Arts</option>
+		<option value="Humanities">Humanities</option>
+		<option value="Other">Other</option>
+		<option value="No Major">No Major</option>
+	</select>
+</ul>
+
+<ul>
+<input type="text" name="experience" placeholder="Experience in years" required="required" />
+</ul>
+
+<ul>
+<select name="company_size" >
+		<option value="" disabled selected>company size</option>
+		<option value="50-99">50-99</option>
+		<option value="<10"><10</option>
+		<option value="10000+">10000+</option>
+		<option value="5000-9999">5000-9999</option>
+		<option value="1000-4999">1000-4999</option>
+		<option value="10/49">10/49</option>
+		<option value="100-500">100-500</option>
+		<option value="500-999">500-999</option>
+	</select>
+</ul>
+
+<ul>
+<select name="company_type" >
+		<option value="" disabled selected>Company type</option>
+		<option value="Pvt Ltd">Pvt Ltd</option>
+		<option value="Funded Startup">Funded Startup</option>
+		<option value="Early Stage Startup">Early Stage Startup</option>
+		<option value="Other">Other</option>
+		<option value="Public Sector">Public Sector</option>
+		<option value="NGO">NGO</option>
+	</select>
+</ul>
+
+<ul>
+<select name="last_new_job" >
+		<option value="" disabled selected>Diff bw last&new job</option>
+		<option value="1">1</option>
+		<option value=">4">>4</option>
+		<option value="never">never</option>
+		<option value="4">4</option>
+		<option value="3">3</option>
+		<option value="2">2</option>
+	</select>
+</ul>
+
+<ul>
+<input type="text" name="training_hours" placeholder="training hours" required="required" />
+</ul>
+
+
+<ul>
+<button type="submit">Predict</button>
+</ul>
+
+</form>	
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+</body>
+</html>
+
+
+
